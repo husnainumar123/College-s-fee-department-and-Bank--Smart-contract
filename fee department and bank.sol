@@ -29,7 +29,7 @@ function SubmitFee()public payable ///function to collect fee one by one from di
     
 }
 ////Manager will send all the collected money to bank account(other contract) using this function
-function sendmoney(address payable _bank) public payable 
+function sendmoney(address payable _bank) public
  {
         require(msg.sender==manager,"Only Manager is eligible to Transfer the money");
         _bank.transfer(totalfee);
